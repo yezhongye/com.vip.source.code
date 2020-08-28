@@ -10,6 +10,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>my-spring-DI</module>
+        <module>my-spring-IOC</module>
     </modules>
 
     <properties>
