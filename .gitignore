@@ -38,7 +38,7 @@ target/
 *.ipr
 *.iml
 *.iws
-com.vip.source.code.root/.idea/
+com.vip.source.code.root/*.idea/
 
 # temp ignore
 *.log
