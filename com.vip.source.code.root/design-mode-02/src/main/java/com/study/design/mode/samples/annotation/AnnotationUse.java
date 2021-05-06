@@ -7,7 +7,7 @@ package com.study.design.mode.samples.annotation;
  * @version 1.0.0
  * @date 2021/2/4 13:54
  */
-@FirstAnnotation(key = "nameKey",value = "nameValue1")
+@FirstAnnotation(key = "nameKey",value = "nameValue")
 public class AnnotationUse {
 
     public AnnotationUse(){
