@@ -16,12 +16,9 @@ public class ThreadTimeOutTest {
     @Test
     public void myThreadTimeOutTest(){
         ExecutorService executorService = Executors.newSingleThreadExecutor();
-        Callable<String> callable = new Callable<String>() {
-            @Override
-            public String call() throws Exception {
-                Thread.sleep(1000 * 10);
-                return "SUCCESS";
-            }
+        Callable<String> callable = () -> {
+            Thread.sleep(1000 * 10);
+            return "SUCCESS";
         };
         Future<String> futureResult = executorService.submit(callable);
         String resultStr;
