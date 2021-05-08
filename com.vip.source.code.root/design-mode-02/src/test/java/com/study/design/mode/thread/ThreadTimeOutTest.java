@@ -21,18 +21,17 @@ public class ThreadTimeOutTest {
             return "SUCCESS";
         };
         Future<String> futureResult = executorService.submit(callable);
-        String resultStr;
+        String resultStr = "初始";
         try {
-            resultStr = futureResult.get(7,TimeUnit.SECONDS);
-            System.out.println("任务返回结果："+resultStr);
+            resultStr = futureResult.get(11,TimeUnit.SECONDS);
         } catch (InterruptedException e) {
             e.printStackTrace();
         } catch (ExecutionException e) {
             e.printStackTrace();
         } catch (TimeoutException e) {
-            System.out.println("任务超时：");
-            e.printStackTrace();
+            resultStr = "任务超时";
         }
         executorService.shutdown();
+        System.out.println("执行结果："+ resultStr);
     }
 }
