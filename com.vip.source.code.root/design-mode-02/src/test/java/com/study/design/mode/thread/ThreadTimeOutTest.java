@@ -17,6 +17,7 @@ public class ThreadTimeOutTest {
     public void myThreadTimeOutTest(){
         ExecutorService executorService = Executors.newSingleThreadExecutor();
         Callable<String> callable = () -> {
+            System.out.println("任务执行中");
             Thread.sleep(1000 * 10);
             return "SUCCESS";
         };
